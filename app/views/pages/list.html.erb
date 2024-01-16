@@ -1,0 +1,11 @@
+<div style="width:100%; background:green;"><h1><%=@task.detail  %></h1></div>
+
+<div><p><%=@task.todo  %></p></div>
+
+<%= link_to "Back", tasks_path %>
+<%= link_to "Edit", edit_task_path(@task) %>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
